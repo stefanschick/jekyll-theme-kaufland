@@ -1,1 +1,267 @@
-{{ content }}
+<html>
+    <head>
+        <title>Kaufland Tech Blog</title>
+        <meta charset="UTF-8"> 
+
+        <style type="text/css">
+            .container {
+                display: grid;
+                grid-template-columns: auto 800px auto;
+                grid-template-rows: 25% auto 10%;
+                grid-template-areas: 
+                    ". header ."
+                    ". content ."
+                    "footer footer footer";
+            }
+
+            header {
+                grid-area: header;
+                background-color: blue;
+            }
+
+            .content {
+                grid-area: content;
+                background-color: orange;
+            }
+
+            footer {
+                grid-area: footer;
+                background-color: greenyellow;
+            }
+
+/* Color palette */
+
+:root {
+    --clear-blue: #2c95f3;
+    --lightgrey: #efefef;
+    --darkgrey: #424242;
+    --middlegrey: #d6d6d6;
+    --kaufland-red: #e3000f;
+  }
+  
+  /* Text styles */
+  
+  h1 {
+    font-family: Kaufland;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  h2 {
+    font-family: Kaufland;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.25;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  h3 {
+    font-family: Kaufland;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.67;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+
+  h4 {
+    font-family: Kaufland;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.57;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  .abstract {
+    font-family: Kaufland;
+    font-size: 18px;
+    line-height: 1.67;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  body {
+    font-family: Kaufland;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  table {
+    font-family: Kaufland;
+    font-size: 14px;
+    line-height: 1.57;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+  
+  caption {
+    font-family: Kaufland;
+    font-size: 12px;
+    line-height: 2.5;
+    text-align: left;
+    color: #424242;
+    color: var(--darkgrey);
+  }
+
+
+            /* Kaufland Regular*/
+@font-face {
+    font-family: 'Kaufland';
+    font-style: normal;
+    font-weight: normal;
+    src: url('https://media.kaufland.com/fonts//Kaufland-Regular/Kaufland-Regular.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-Regular/Kaufland-Regular.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Regular/Kaufland-Regular.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-Regular/Kaufland-Regular.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-Regular/Kaufland-Regular.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Regular/Kaufland-Regular.svg#Kaufland-Regular') format('svg');
+}
+
+
+/* Kaufland Italic*/
+@font-face {
+    font-family: 'Kaufland';
+    font-style: normal;
+    font-weight: italic;
+    src: url('https://media.kaufland.com/fonts//Kaufland-Italic/Kaufland-Italic.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-Italic/Kaufland-Italic.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Italic/Kaufland-Italic.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-Italic/Kaufland-Italic.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-Italic/Kaufland-Italic.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Italic/Kaufland-Italic.svg#Kaufland-Italic') format('svg');
+}
+
+
+/* Kaufland Bold*/
+@font-face {
+    font-family: 'Kaufland';
+    font-style: normal;
+    font-weight: Bold;
+    src: url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Bold/Kaufland-Bold.svg#Kaufland-Bold') format('svg');
+}
+
+/* Kaufland Bold Italic */
+@font-face {
+    font-family: 'Kaufland';
+    font-style: italic;
+    font-weight: Bold;
+    src: url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-BoldItalic/Kaufland-BoldItalic.svg#Kaufland-BoldItalic') format('svg');
+}
+
+/* Kaufland Light*/
+@font-face {
+    font-family: 'Kaufland';
+    font-style: normal;
+    font-weight: lighter;
+    src: url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Light/Kaufland-Light.svg#Kaufland-Light') format('svg');
+}
+
+/* Kaufland Light Italic */
+@font-face {
+    font-family: 'Kaufland';
+    font-style: italic;
+    font-weight: lighter;
+    src: url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-LightItalic/Kaufland-LightItalic.svg#Kaufland-LightItalic') format('svg');
+}
+
+
+
+/* Kaufland Heavy*/
+@font-face {
+    font-family: 'Kaufland';
+    font-style: normal;
+    font-weight: bolder;
+    src: url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-Heavy/Kaufland-Heavy.svg#Kaufland-Heavy') format('svg');
+}
+
+/* Kaufland Heavy Italic */
+@font-face {
+    font-family: 'Kaufland';
+    font-style: italic;
+    font-weight: bolder;
+    src: url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.eot');
+    src: url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.eot?#iefix') format('embedded-opentype'),
+         url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.woff2') format('woff2'),
+         url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.woff') format('woff'),
+         url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.ttf') format('truetype'),
+         url('https://media.kaufland.com/fonts/Kaufland-HeavyItalic/Kaufland-HeavyItalic.svg#Kaufland-BoldItalic') format('svg');
+}
+
+
+
+
+        </style>
+
+
+
+    </head>
+    <body class="container">
+        <header>
+            <div style="display:inline-block;vertical-align:top;">   
+                <img src="./KL_standard_S_sRGB.svg" height="100px" />
+            </div>
+            <div style="display:inline-block;">
+                <h1>Kaufland Tech Blog - {{ page.title }}</h1>
+            </div>
+        </header>
+        <div class="content">
+            <article>
+                    <div class="title">{{ page.title }}</div>
+                    
+                    <div class="excerpt">{{ page.excerpt }}</div>
+                    
+                    <div class="blogpost">{{ page.content }}</div>
+        
+                    <div class="categories">{{ page.categories }}</div>
+                    <div class="tags">{{ page.tags }}</div>
+        
+                    <div class="navigation">
+                        <div style="float:left">{{ page.previous }}</div>
+                        <div style="float:left">{{ page.next }}</div>
+                    </div>
+            </article>
+
+        </div>
+        <footer>
+            Footer
+        </footer>
+    </body>
+</html>
